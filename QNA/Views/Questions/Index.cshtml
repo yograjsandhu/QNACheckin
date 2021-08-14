@@ -1,0 +1,58 @@
+﻿@model IEnumerable<QNA.Models.Question>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Questions</h1>
+
+<p>
+    <a asp-action="Create">Ask Question</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th hidden>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+
+                <a asp-action="answer" asp-route-id="@item.QuestionId"> @Html.DisplayFor(modelItem => item.QuestionName)</a> 
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td hidden>
+                @Html.DisplayFor(modelItem => item.Category.CategoryId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.QuestionId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.QuestionId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.QuestionId">Delete</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
