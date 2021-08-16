@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using WebDriverManager;
+using System;
 using WebDriverManager.DriverConfigs.Impl;
 
 namespace QNA_Integration_Tests
@@ -14,7 +15,7 @@ namespace QNA_Integration_Tests
         // to install Microsoft WebDriver.
 
         private ChromeDriver _driver;
-        private string testUrl = "https://localhost:5001/";
+        private string testUrl = "http://localhost:5000/";
 
         [TestInitialize]
         public void EdgeDriverInitialize()
@@ -29,6 +30,35 @@ namespace QNA_Integration_Tests
             };
 
             _driver = new ChromeDriver(options);
+        }
+             
+        [TestMethod]
+        [DataRow("Business")]
+        public void CreateCategory( string Category) {
+
+            _driver.Manage().Window.Maximize();
+            _driver.Navigate().GoToUrl(testUrl + "Categories/Create");
+            // _driver.Manage().Timeouts().ImplicitWait(TimeSpan.FromSeconds(3));
+
+             var x = _driver.FindElementById("Category");
+
+            //var x = _driver.FindElement(By.CssSelector("input.Category"));
+
+                 x.SendKeys(Category);
+
+            //Act
+
+            // _driver.FindElement(By.CssSelector("input.btn btn-primary")).Click;
+
+            _driver.FindElementById("CategoryCreate").Click();
+
+        
+        }
+
+        [TestCleanup]
+        public void EdgeDriverCleanup()
+        {
+            _driver.Quit();
         }
 
     }
