@@ -238,3 +238,11 @@ C:\Users\sarbj\source\repos\QNA\QNATest\bin\Debug\net5.0\Castle.Core.dll
 C:\Users\sarbj\source\repos\QNA\QNATest\bin\Debug\net5.0\Moq.dll
 C:\Users\sarbj\source\repos\QNA\QNATest\bin\Debug\net5.0\QNALibrary.dll
 C:\Users\sarbj\source\repos\QNA\QNATest\bin\Debug\net5.0\QNALibrary.pdb
+C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNATest\obj\Debug\net5.0\QNATest.csproj.AssemblyReference.cache
+C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNATest\obj\Debug\net5.0\QNATest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNATest\obj\Debug\net5.0\QNATest.AssemblyInfoInputs.cache
+C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNATest\obj\Debug\net5.0\QNATest.AssemblyInfo.cs
+C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNATest\obj\Debug\net5.0\QNATest.csproj.CoreCompileInputs.cache
+C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNATest\obj\Debug\net5.0\QNATest.dll
+C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNATest\obj\Debug\net5.0\ref\QNATest.dll
+C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNATest\obj\Debug\net5.0\QNATest.pdb

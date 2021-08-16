@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sarbj\\source\\repos\\QNA\\QNALibrary\\QNALibrary.csproj": {}
+    "C:\\Users\\jatinder\\Source\\Repos\\QNACheckinFinal\\QNALibrary\\QNALibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sarbj\\source\\repos\\QNA\\QNALibrary\\QNALibrary.csproj": {
+    "C:\\Users\\jatinder\\Source\\Repos\\QNACheckinFinal\\QNALibrary\\QNALibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sarbj\\source\\repos\\QNA\\QNALibrary\\QNALibrary.csproj",
+        "projectUniqueName": "C:\\Users\\jatinder\\Source\\Repos\\QNACheckinFinal\\QNALibrary\\QNALibrary.csproj",
         "projectName": "QNALibrary",
-        "projectPath": "C:\\Users\\sarbj\\source\\repos\\QNA\\QNALibrary\\QNALibrary.csproj",
-        "packagesPath": "C:\\Users\\sarbj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sarbj\\source\\repos\\QNA\\QNALibrary\\obj\\",
+        "projectPath": "C:\\Users\\jatinder\\Source\\Repos\\QNACheckinFinal\\QNALibrary\\QNALibrary.csproj",
+        "packagesPath": "C:\\Users\\jatinder\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jatinder\\Source\\Repos\\QNACheckinFinal\\QNALibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sarbj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jatinder\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -60,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.206\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }
