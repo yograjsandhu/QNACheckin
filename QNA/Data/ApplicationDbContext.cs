@@ -7,6 +7,7 @@ using System.Text;
 
 namespace QNA.Data
 {
+
     public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext() { }

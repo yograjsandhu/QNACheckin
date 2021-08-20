@@ -1,0 +1,16 @@
+{
+  "name": "QNA",
+  "short_name": "QNA",
+  "background_color": "#00FF00",
+  "start_url": "/",
+  "scope": "/",
+  "display": "minimal-ui",
+  "icons": [
+    {
+      
+
+    }
+
+  ]
+
+}

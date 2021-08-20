@@ -3,41 +3,57 @@
 @{
     ViewData["Title"] = "Index";
 }
+<style>
+    table {
+        border-collapse: collapse;
+        border-spacing: 5em;
+        width: 100%;
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 16px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    
+</style>
 
 <h1>All Questions</h1>
 
 <p>
     <a asp-action="Create">Ask Question</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
+<table class="table" cellpadding="5" cellspacing="5" >
 
-            <th>
-                @Html.DisplayNameFor(model => model.QuestionName)
-            </th>
-
-            <th>
-                @Html.DisplayNameFor(model => model.CategoryName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.name)
-            </th>
-            <th hidden>
-                @Html.DisplayNameFor(model => model.Category)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
+        <tr style="padding-bottom: 15px">
+            <td >
+                
+                    <div>
+                        <a asp-action="answer" asp-route-id="@item.QuestionId"> @Html.DisplayFor(modelItem => item.QuestionName)</a>
+                    </div>
+                    <br />
+                    <br />
 
-                <a asp-action="answer" asp-route-id="@item.QuestionId"> @Html.DisplayFor(modelItem => item.QuestionName)</a> 
+                    <div>
 
+                        <span style="float:left">Posted by : @Html.DisplayFor(modelItem => item.name)</span>
+
+                        <span style="float:right">Category : @Html.DisplayFor(modelItem => item.CategoryName)</span>
+
+                    </div>
+               
+                <br />
+
+                
             </td>
-            <td>
+          @*  <td>
                 @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
             <td>
@@ -45,14 +61,15 @@
             </td>
             <td hidden>
                 @Html.DisplayFor(modelItem => item.Category.CategoryId)
-            </td>
-            <td>
+            </td>*@
+            <td style="float:right">
                 <a asp-action="Edit" asp-route-id="@item.QuestionId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.QuestionId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.QuestionId">Delete</a>
 
             </td>
         </tr>
+        
 }
     </tbody>
 </table>

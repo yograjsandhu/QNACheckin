@@ -22,3 +22,15 @@ C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNALibrary\obj\Debug\net5.0\QNALi
 C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNALibrary\obj\Debug\net5.0\QNALibrary.dll
 C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNALibrary\obj\Debug\net5.0\ref\QNALibrary.dll
 C:\Users\jatinder\Source\Repos\QNACheckinFinal\QNALibrary\obj\Debug\net5.0\QNALibrary.pdb
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\bin\Debug\net5.0\QNALibrary.deps.json
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\bin\Debug\net5.0\QNALibrary.dll
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\bin\Debug\net5.0\ref\QNALibrary.dll
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\bin\Debug\net5.0\QNALibrary.pdb
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\obj\Debug\net5.0\QNALibrary.csprojAssemblyReference.cache
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\obj\Debug\net5.0\QNALibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\obj\Debug\net5.0\QNALibrary.AssemblyInfoInputs.cache
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\obj\Debug\net5.0\QNALibrary.AssemblyInfo.cs
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\obj\Debug\net5.0\QNALibrary.csproj.CoreCompileInputs.cache
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\obj\Debug\net5.0\QNALibrary.dll
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\obj\Debug\net5.0\ref\QNALibrary.dll
+C:\Users\sarbj\Source\Repos\QNACheckin1908\QNALibrary\obj\Debug\net5.0\QNALibrary.pdb

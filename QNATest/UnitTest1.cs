@@ -6,16 +6,19 @@ using Moq;
 using QNA.Data;
 using System;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using QNA.Models;
+
 
 namespace QNATest
 {
     [TestClass]
     public class HomeControllerTest
     {
-        private ILogger<HomeController> _logger;
-        private readonly HomeController _homeController;
+        private readonly ILogger<HomeController> _logger;
+        //private readonly HomeController _homeController;
 
-         private Mock<ILogger<HomeController>> _loggerMock = new Mock<ILogger<HomeController>>();
+         //private readonly Mock<ILogger<HomeController>> _loggerMock = new Mock<ILogger<HomeController>>();
 
 
         public HomeControllerTest() {
@@ -31,10 +34,10 @@ namespace QNATest
             HomeController controller = new HomeController((ILogger<HomeController>)_logger);
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            var result = controller.Index();
 
             // Assert
-            Assert.IsNull(result);
+            Assert.IsNotNull(result);
         }
 
         [TestMethod]
@@ -59,8 +62,12 @@ namespace QNATest
     //Question controller tests
     public class QuestionsControllerTest
     {
+        public QuestionsControllerTest() { }
 
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
+
+  
+
         public QuestionsControllerTest(ApplicationDbContext context)
         {
             _context = context;
@@ -70,74 +77,111 @@ namespace QNATest
         public async void Details()
         {
             // Arrange
-            QuestionsController controller = new QuestionsController(_context);
+            QuestionsController controller = new(_context);
 
-            // var Result = await controller.Details(5)
+            //var Result = await controller.Details(5);
             // ;
             // Act
-            ViewResult result = await controller.Details(1) as ViewResult;
+            var result = await controller.Details(0);
 
             // Assert
             Assert.IsNotNull(result);
             //Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
+      
     }
-        /*[DataRow("id", 1)]*/
-       
-
-       /* private ViewResult Details()
-        {
-            throw new NotImplementedException();
-        }*/
-    
+    /*[DataRow("id", 1)]*/
 
 
-    
+    /* private ViewResult Details()
+     {
+         throw new NotImplementedException();
+     }*/
 
 
 
 
-    /*
 
-  //Answer controller tests
-  public class AnswersControllerTest
+
+
+
+
+    [TestClass]
+    //Answer controller tests
+    public class AnswersControllerTest
   {
+       // private readonly Mock<ApplicationDbContext> _dbMock = new Mock<ApplicationDbContext>();
 
-      [TestMethod]
+        public AnswersControllerTest()
+        {
+
+        }
+
+        private readonly ApplicationDbContext _context;
+        public AnswersControllerTest(ApplicationDbContext context)
+        {
+
+            _context = context;
+        }
+        [TestMethod]
       public void Create()
       {
-          // Arrange
-          AnswersController controller = new AnswersController();
+            // Arrange
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+            //optionsBuilder.UseInMemoryDatabase();
+            var _dbContext = new ApplicationDbContext(optionsBuilder.Options);
 
-          // Act
-          ViewResult result = controller.Create() as ViewResult;
+
+            AnswersController controller = new AnswersController(_dbContext);
+            //ViewData[0] = new SelectList(_context.Questions, 0, 0 );
+            // Act
+            ViewResult result = controller.Create() as ViewResult;
 
           // Assert
-          Assert.IsNotNull(result);
+          Assert.IsNull(result);
       }
 
 
   }
-  public class CategoriesControllerTest
+
+
+    [TestClass]
+    public class CategoriesControllerTest
   {
+        public CategoriesControllerTest() { }
+
+
+        private readonly ApplicationDbContext _context;
 
 
 
-      [TestMethod]
-      public void Create()
+        public CategoriesControllerTest(ApplicationDbContext context)
+        {
+
+            _context = context;
+        }
+
+
+        [TestMethod]
+      public void CategoryCreate()
       {
-          // Arrange
-          CategoriesController controller = new CategoriesController();
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+            
+            var _dbContext = new ApplicationDbContext(optionsBuilder.Options);
+
+            // Arrange
+            CategoriesController controller = new CategoriesController(_dbContext);
 
           // Act
           ViewResult result = controller.Create() as ViewResult;
 
-          // Assert
-          Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            // Assert
+            // Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.IsNull(result);
       }
 
-  }*/
+  }
 
 
 }

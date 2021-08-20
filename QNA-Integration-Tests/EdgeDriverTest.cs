@@ -15,7 +15,8 @@ namespace QNA_Integration_Tests
         // to install Microsoft WebDriver.
 
         private ChromeDriver _driver;
-        private string testUrl = "http://localhost:5000/";
+
+       private string testUrl = "http://localhost:5000/";
 
         [TestInitialize]
         public void EdgeDriverInitialize()
@@ -55,11 +56,72 @@ namespace QNA_Integration_Tests
         
         }
 
+        [TestMethod]
+        [DataRow("yogasandhu@gmail.com", "Password@123", "Password@123")]
+        public void Login(string Email, string Password , string confirm)
+        {
+
+            _driver.Manage().Window.Maximize();
+            _driver.Navigate().GoToUrl(testUrl + "Identity/Account/Register");
+            // _driver.Manage().Timeouts().ImplicitWait(TimeSpan.FromSeconds(3));
+
+            var x = _driver.FindElementById("Email");
+            var y = _driver.FindElementById("Password");
+            var z = _driver.FindElementById("Confirm");
+
+            
+
+            x.SendKeys(Email);
+            y.SendKeys(Password);
+            z.SendKeys(confirm);
+
+
+            //Act
+
+            // _driver.FindElement(By.CssSelector("input.btn btn-primary")).Click;
+
+            _driver.FindElementById("Login").Click();
+
+
+        }
+
+        [TestMethod]
+        [DataRow("Sample question", 1, "Yograj")]
+        public void CreateQuestion(string Question, String Postedby)
+        {
+
+            _driver.Manage().Window.Maximize();
+            _driver.Navigate().GoToUrl(testUrl + "Questions/Create");
+            // _driver.Manage().Timeouts().ImplicitWait(TimeSpan.FromSeconds(3));
+
+            var x = _driver.FindElementById("Question");
+
+            var z = _driver.FindElementById("Postedby");
+
+            //var x = _driver.FindElement(By.CssSelector("input.Category"));
+
+            x.SendKeys(Question);
+            z.SendKeys(Postedby);
+
+
+            //Act
+
+            // _driver.FindElement(By.CssSelector("input.btn btn-primary")).Click;
+
+            _driver.FindElementById("Create").Click();
+
+
+        }
+
+
         [TestCleanup]
         public void EdgeDriverCleanup()
         {
             _driver.Quit();
         }
+
+
+
 
     }
 
